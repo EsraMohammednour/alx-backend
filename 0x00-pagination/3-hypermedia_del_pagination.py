@@ -45,17 +45,14 @@ class Server:
             assert index is not None and index >= 0
             assert index <= max(data.keys())
             page_d = []
-            next_index = None
             data_count = 0
-            start = index if index else 0
+            start = index if index is not None else 0
             for i, item in data.items():
                 if i >= start and data_count < page_size:
                     page_d.append(item)
                     data_count += 1
                     continue
-                if data_count == page_size:
-                    next_index = i
-                    break
+            next_index = i + 1 if data_count == page_size else None
             return {
                 'index': index,
                 'next_index': next_index,
