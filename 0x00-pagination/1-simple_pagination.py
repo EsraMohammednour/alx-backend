@@ -1,9 +1,15 @@
 #!/usr/bin/env python3
 '''0. Simple helper function'''
-from typing import Tuple
 import csv
 import math
-from typing import List
+from typing import List, Tuple
+
+
+def index_range(page: int, page_size: int) -> Tuple[int, int]:
+    '''Function that return pagination parameter'''
+    start_index = (page - 1) * page_size
+    end_index = start_index + page_size
+    return (start_index, end_index)
 
 
 class Server:
@@ -26,18 +32,11 @@ class Server:
         return self.__dataset
 
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
-            '''function that git page'''
-            assert type(page) == int and type(page_size) == int
-            assert page > 0 and page_size > 0
-            start, end = index_range(page, page_size)
-            data = self.dataset
-            if start > len(data):
-                return []
-            return data[start:end]
-
-
-def index_range(page: int, page_size: int) -> Tuple[int, int]:
-    '''Function that return pagination parameter'''
-    start_index = (page - 1) * page_size
-    end_index = start_index + page_size
-    return (start_index, end_index)
+        '''Module that return page of date'''
+        assert isinstance(page, int) and isinstance(page_size, int)
+        assert page > 0 and page_size > 0
+        start, end = index_range(page, page_size)
+        data = self.dataset
+        if start > len(data):
+            return []
+        return [start:end]
