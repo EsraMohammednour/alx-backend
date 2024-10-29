@@ -5,10 +5,7 @@ from base_caching import BaseCaching
 
 class BasicCache(BaseCaching):
     '''bashcache that inherits from basecaching'''
-    def __init__(self):
-        '''Initilliaze'''
-        super().__init__()
-    
+
     def put(self, key, item):
         '''Store key-value pair in the cache_data dictionary'''
         if key is not None and item is not None:
