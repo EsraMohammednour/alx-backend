@@ -13,6 +13,8 @@ class LIFOCache(BaseCaching):
 
     def put(self, key, item):
         '''store item that have key-value pairs'''
+        if key is None or item is None:
+            return
         if key not in self.cache_data:
             if len(self.cache_data) + 1 > BaseCaching.MAX_ITEMS:
                 last_key, _ = self.cache_data.popitem(True)
@@ -22,6 +24,4 @@ class LIFOCache(BaseCaching):
 
     def get(self, key):
         '''return the value from cache_data'''
-        if key in None or key not in self.cache_data:
-            return None
         return self.cache_data.get(key, None)
