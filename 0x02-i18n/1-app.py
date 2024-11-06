@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 '''Module thatconfigure available languages in our app'''
- from flask import Flask, render_template
- from flask_babel import Babel
+from flask import Flask, render_template
+from flask_babel import Babel
 
 
 class Config:
