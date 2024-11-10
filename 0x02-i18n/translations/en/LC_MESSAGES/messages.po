@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the PROJECT project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 #
-msgid "home_title"
-msgstr "Welcome to Holberton"
+msgid ""
+msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-11-09 16:25+0200\n"
-"PO-Revision-Date: 2024-11-09 16:25+0200\n"
-"Last-Translator: Esra MohammedNour Mohammed <esraa2023112@gmail.com>\n"
+"POT-Creation-Date: 2024-11-10 16:56+0200\n"
+"PO-Revision-Date: 2024-11-10 16:56+0200\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
 "Language-Team: en <LL@li.org>\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
@@ -17,4 +17,4 @@ msgstr "Welcome to Holberton"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.16.0\n"
-msgid ""
+
